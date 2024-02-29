@@ -1,0 +1,30 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::before, ::after {
+    box-sizing: inherit;
+}
+
+.body {
+    display: block;
+    position: relative;
+    width: 60%;
+    margin: 2% auto;
+    background-image: url(https://www.chip.pl/_next/image?url=https%3A%2F%2Fkonto.chip.pl%2Fwp-content%2Fuploads%2F2023%2F01%2Fniebo.jpg&w=1600&q=90);
+}
+
+.fieldset__currencyConverter {
+    background-color: #e9f9fe;
+}
+
+.legend__nameCurrencyConverter {
+    padding: 1%;
+    background-color: #a7cbf7;
+    border: 2px solid #305c92;
+}
+
+.span--position{
+    position: absolute;
+    right: 1%;
+}
