@@ -9,22 +9,63 @@ html {
 .body {
     display: block;
     position: relative;
-    width: 60%;
-    margin: 2% auto;
-    background-image: url(https://www.chip.pl/_next/image?url=https%3A%2F%2Fkonto.chip.pl%2Fwp-content%2Fuploads%2F2023%2F01%2Fniebo.jpg&w=1600&q=90);
+    font-family: "Lato" sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.88);
+    background-image: url("../img/kantor-online.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
-.fieldset__currencyConverter {
-    background-color: #e9f9fe;
+.form {
+    width: 55%;
+    margin: auto;
 }
 
 .legend__nameCurrencyConverter {
+    margin: 0 auto;
     padding: 1%;
-    background-color: #a7cbf7;
-    border: 2px solid #305c92;
+    line-height: 42px;
+    font-size: 24px;
+    background-color: #a7cbf7b0;
+    border: 2px solid #305c92b0;
 }
 
-.span--position{
-    position: absolute;
-    right: 1%;
+.fieldset__currencyConverter {
+    
+    margin: 5% auto;
+    padding: 0 5%;
+    background-color: hsla(194, 80%, 44%, 0.5);
+}
+
+.undefinedList__CurrencyBefore {
+    display: flex;
+    justify-content:space-around;
+    list-style: none;
+   
+    margin: 0 auto 0 -10%;
+}
+
+.select__currencyAfter {
+    width: -20%;
+}
+/*==========================================  */
+.button__amount {
+    padding: 1% 3%;
+    border: 1 solid white;
+    color: white;
+    background-color: rgba(2, 24, 41, 0.747);
+}
+
+.div__resultCalculation{
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    /* left: 50%; */
+    top: -10%;
+    border: 2px solid;
+    padding: 1%;
+    background-color: rgba(24, 39, 152, 0.786);
+    z-index: 1;
 }

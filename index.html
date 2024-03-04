@@ -17,29 +17,60 @@
     <script defer src="js/script.js"></script>
 </head>
 
-<body class="body">
+<body class="body body--backgroundImage">
     <form class="form js-form" action="">
         <fieldset class="fieldset__currencyConverter">
             <legend class="legend__nameCurrencyConverter">Kalkulator walut</legend>
-            Kalkulator PLN Na wybraną przez Ciebie walutę:
             <p>
+                Zamiana pieniędzy, które są waluty*:
+            <ul class="undefinedList__CurrencyBefore js-undefinedList__CurrencyBefore">
+                <li>
+                    <label for="">
+                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="eur"> Euro
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="zl"> Złoty
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="usd"> Dolar Amerykański
+                    </label>
+                </li>
+                <li>
+                    <label for="">
+                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="gbp"> Funt Brytyjski
+                    </label>
+                </li>
+            </ul>
+            </p>
+            <p>
+                na pieniądze, w walucie *
+                <select class="select__currencyAfter js-select__currencyAfter">
+                    <option class="currencyAfter--euro js-currencyAfter--euro" value="EUR">Euro</option>
+                    <option class="currencyAfter--zloty js-currencyAfter--zloty" value="ZL">Złoty</option>
+                    <option class="currencyAfter--usd js-currencyAfter--usd" value="USD">Dolar Amerykański</option>
+                    <option class="currencyAfter--gbp js-currencyAfter--gbp" value="GBP">Funt Brytyjski</option>
+                </select>
+            </p>
+            <p>
+                Wprowadź zmienianą kwotę pieniędzy*
                 <label for="">
-                    Kwota(PLN)*
-                    <input class="js-amount" type="number" max="1000000" required>
+                    <input class="amount js-amount" type="number" min="1" max="10000000" name="amount" required>
                 </label>
+                <span><strong class="js-currencyBefore"></strong></span>
             </p>
             <p>
-                Wybór waluty na jaką chcesz zamienić pieniądze
-               <select class="currency js-currency">
-                <option class="currencyEUR" value="EUR">EUR</option>
-                <option class="currencyUSD" value="USD">USD</option>
-               </select>
+                <button class="button__amount js-button__amount"><strong>Oblicz wynik</strong></button>
             </p>
-        <p>
-            <button>Oblicz swój rezultat</button>
-           <span class="span span--position">Wynik obliczeń: <strong class="js-score"></strong></span> 
-        </p>
-    </fieldset>
+        </fieldset>
+        <div class="div__resultCalculation">
+            <span class="span span--position"><strong>Wynik obliczeń: </strong><strong class="js-strong__finalAmount"></strong>
+                <strong class="js-strong__finalCurrency"></strong>
+            </span>
+        </div>
     </form>
 </body>
 
