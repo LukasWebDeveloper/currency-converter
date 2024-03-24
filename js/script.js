@@ -1,28 +1,36 @@
-let formElement = document.querySelector(".js-form")
-let amountElement = document.querySelector(".js-amount");
-let currencyElement = document.querySelector(".js-currency");
-let scoreElement = document.querySelector(".js-score")
-
-
-let rateEUR = 4.40;
-let rateUSD = 4.04;
+const amountElement = document.querySelector(".js-amount");
+const currencyElement = document.querySelector(".js-currency");
+const resultElement = document.querySelector(".js-result");
+const formElement = document.querySelector(".js-form");
 
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
-    
-    let amount = +amountElement.value;
-    let currency = currencyElement.value
 
-    let score;
+    let currency = currencyElement.value;
+    let amount = +amountElement.value;
+
+    // amountCurrency with day 4 MARCH
+    let rateEUR = 4.32;
+    let rateGBP = 5.05;
+    let rateUSD = 3.98;
 
     switch (currency) {
+
         case "EUR":
-            score = amount / rateEUR;
+            result = amount / rateEUR;
+            break;
+        case "GBP":
+            result = amount / rateGBP;
             break;
         case "USD":
-            score = amount / rateUSD;
+            result = amount / rateUSD;
             break;
     }
 
-    scoreElement.innerHTML = `${amount.toFixed(2)} PLN = ${score.toFixed(2)} ${currency}`;
+    resultElement.innerText = `         ${amount} PLN = ${result.toFixed(2)} ${currency}`;
 });
+
+
+
+
+

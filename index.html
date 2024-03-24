@@ -4,74 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency-converter Ł.D.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
         rel="stylesheet">
-    <title>Currency-converter Ł.D.</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/script.js"></script>
 </head>
 
 <body class="body body--backgroundImage">
-    <form class="form js-form" action="">
-        <fieldset class="fieldset__currencyConverter">
-            <legend class="legend__nameCurrencyConverter">Kalkulator walut</legend>
-            <p>
-                Zamiana pieniędzy, które są waluty*:
-            <ul class="undefinedList__CurrencyBefore js-undefinedList__CurrencyBefore">
-                <li>
-                    <label for="">
-                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="eur"> Euro
-                    </label>
-                </li>
-                <li>
-                    <label for="">
-                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="zl"> Złoty
-                    </label>
-                </li>
-                <li>
-                    <label for="">
-                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="usd"> Dolar Amerykański
-                    </label>
-                </li>
-                <li>
-                    <label for="">
-                        <input class="label__currencyBefore js-label__currencyBefore" type="radio" name="currency" value="gbp"> Funt Brytyjski
-                    </label>
-                </li>
-            </ul>
-            </p>
-            <p>
-                na pieniądze, w walucie *
-                <select class="select__currencyAfter js-select__currencyAfter">
-                    <option class="currencyAfter--euro js-currencyAfter--euro" value="EUR">Euro</option>
-                    <option class="currencyAfter--zloty js-currencyAfter--zloty" value="ZL">Złoty</option>
-                    <option class="currencyAfter--usd js-currencyAfter--usd" value="USD">Dolar Amerykański</option>
-                    <option class="currencyAfter--gbp js-currencyAfter--gbp" value="GBP">Funt Brytyjski</option>
-                </select>
-            </p>
-            <p>
-                Wprowadź zmienianą kwotę pieniędzy*
-                <label for="">
-                    <input class="amount js-amount" type="number" min="1" max="10000000" name="amount" required>
-                </label>
-                <span><strong class="js-currencyBefore"></strong></span>
-            </p>
-            <p>
-                <button class="button__amount js-button__amount"><strong>Oblicz wynik</strong></button>
-            </p>
-        </fieldset>
-        <div class="div__resultCalculation">
-            <span class="span span--position"><strong>Wynik obliczeń: </strong><strong class="js-strong__finalAmount"></strong>
-                <strong class="js-strong__finalCurrency"></strong>
-            </span>
-        </div>
-    </form>
+
+    <header class="header">
+
+    </header>
+    <main class="main">
+        <form class="form js-form" action="">
+            <article class="article js-article">
+                <fieldset class="fieldset__currencyConverter">
+                    <legend class="legend__nameCurrencyConverter">Kalkulator walut</legend>
+
+                    <p>
+                        Wprowadź zmienianą kwotę w polskich złotych*
+                        <label for="">
+                            <input class="amount js-amount" type="number" min="0.01" step="0.01" name="amount" required>
+                            <strong>zł</strong>
+                        </label>
+                    </p>
+                    <p>
+                        Zamiana kwoty na pieniądze, w walucie *
+                        <select class="select__currency js-currency" name="currency">
+                            <option value="EUR">Euro</option>
+                            <option value="USD">Dolar Amerykański</option>
+                            <option value="GBP">Funt Brytyjski</option>
+                        </select>
+                    </p>
+                    <p>
+                        <button class="button js-button"><strong>Oblicz wynik</strong></button>
+                    </p>
+            <div class="div__resultCalculation">
+                <span class="span span--position">
+                    <strong>Wynik obliczeń: </strong><span class="result js-result"></span>
+                    <strong class="currency js-currency"></strong>
+                </span>
+            </div>
+                </fieldset>
+            </article>
+        </form>
+    </main>
+    <footer class="footer">
+
+    </footer>
+
+
 </body>
 
 </html>
